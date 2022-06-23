@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>
+        Excelente!!! Es facil usar plantillas
+        <p style="color:brown"> Mi nombre es: {{nombre}}</p>
+        <p style="color:aquamarine"> Mi nombre es: {{apellido}}</p>
+    </h1>
+    <h2>Este template fue creado: {{hoy}}</h2>
+    <h2>Estas son mis notas de la universidad {{notas}}</h2>
+    <h3>Vamos Boca</h3>
+    <p>
+        {% for n in notas%}
+
+        {{n}}
+        <br>
+        {% endfor %}
+    </p>
+    <p>
+        {% for n in notas%}
+            {% if n < 4 %}
+                <p style="color:blue"> NOTA MALA {{n}}</p>
+            {%else%} <p style="color:darkred"> NOTA BUENA {{n}}</p>
+            {%endif%}
+
+        {%endfor%}
+    </p>
+    </div>
+</body>
+</html>
